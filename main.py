@@ -172,5 +172,5 @@ async def get_health_provider_details(
     return [ProviderDetails(**provider) for provider in results]
 
 if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    app.run(transport="streamable-http", host="0.0.0.0", port=8000)
+   
